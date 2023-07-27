@@ -1,0 +1,12 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: source-oci-helm-test-chart-0-1-0
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  secretRef:
+    name: nodix-auth
+  type: oci
+  url: oci://registry.nordix.org/nephio/test-chart
